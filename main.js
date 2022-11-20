@@ -8,6 +8,6 @@ function showCurrentDate() {
 }
 
 function pasteThis() {
-    let pasteDate = "Sat Nov 19 2022 12:53:16 GMT-0500 (Eastern Standard Time)"
+    let pasteDate = "Sun Nov 20 2022 11:45:44 GMT-0500 (Eastern Standard Time)"
     date.textContent = pasteDate;
 }
