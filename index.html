@@ -8,12 +8,12 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-        <div id="dateButton">
-            <button id="getButton" onclick="showCurrentDate()">Today's Date Is:</button>
+        <h1>TODAY IS: </h1>
+        <div id="today"></div>
+        <div id="copy-container">
+            <button id="copy-button" onclick="copyDate()">Copy Current Date</button>
         </div>
-        <div id="checkDate">
-            <button onclick="pasteThis()">Check</button>
-        </div>
-        <div id="theDate"></div>
+        <h5>LAST STREAK WAS: </h5>
+        <div id="last-streak"></div>
     </body>
 </html>
