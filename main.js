@@ -19,3 +19,5 @@ function copyDate() {
         alert("Failed to copy: " , err);
     }
 }
+
+console.log("Hello, World!");
