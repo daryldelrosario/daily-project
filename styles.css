@@ -20,6 +20,10 @@ body {
     background-color: lightblue;
 }
 
+#copy-button:hover {
+    cursor: pointer;
+}
+
 h5, #last-streak {
     color: red;
 }
