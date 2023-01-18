@@ -3,7 +3,7 @@ let displayDate = currentDate.toString();
 const today = document.querySelector("#today");
 today.textContent = displayDate;
 
-let lastDate = "Tue Jan 17 2023 07:49:37 GMT-0500 (Eastern Standard Time)";
+let lastDate = "Wed Jan 18 2023 05:20:48 GMT-0500 (Eastern Standard Time)";
 const lastStreak = document.querySelector("#last-streak");
 lastStreak.textContent = lastDate;
 
