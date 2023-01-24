@@ -21,3 +21,5 @@ function copyDate() {
 }
 
 console.log("Hello, World!");
+
+// Practising the comment with CTRL + /
