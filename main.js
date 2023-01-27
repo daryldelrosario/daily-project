@@ -1,3 +1,8 @@
+const logo = document.getElementById("3qd");
+logo.innerHTML = "[3Q]►";
+logo.style.fontSize = "22px";
+logo.style.fontWeight = "700";
+
 let currentDate = new Date();
 let displayDate = currentDate.toString();
 const today = document.querySelector("#today");
@@ -19,7 +24,3 @@ function copyDate() {
         alert("Failed to copy: " , err);
     }
 }
-
-console.log("Hello, World!");
-
-// Practising the comment with CTRL + /
