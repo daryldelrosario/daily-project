@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    border: 1px red solid;
 }
 
 body {
@@ -9,7 +10,15 @@ body {
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    gap: 7px;
+    gap: 1rem;
+}
+
+.today-container {
+    text-align: center;
+}
+
+.last-streak-container {
+    text-align: center;
 }
 
 #copy-button {

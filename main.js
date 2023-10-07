@@ -1,5 +1,5 @@
-const logo = document.getElementById("3qd");
-logo.innerHTML = "[3Q]►";
+const logo = document.getElementById("logo");
+logo.innerHTML = "@daryldevcodes";
 logo.style.fontSize = "22px";
 logo.style.fontWeight = "700";
 
