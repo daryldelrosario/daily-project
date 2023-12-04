@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     gap: 1rem;
+    background-color: orangered;
 }
 
 .today-container {
@@ -33,5 +34,5 @@ body {
 }
 
 h5, #last-streak {
-    color: red;
+    color: white;
 }    
