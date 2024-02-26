@@ -8,7 +8,7 @@ let displayDate = currentDate.toString();
 const today = document.querySelector("#today");
 today.textContent = displayDate;
 
-let lastDate = "Sun Feb 25 2024 09:51:30 GMT-0500 (Eastern Standard Time)";
+let lastDate = "Mon Feb 26 2024 07:51:21 GMT-0500 (Eastern Standard Time)";
 const lastStreak = document.querySelector("#last-streak");
 lastStreak.textContent = lastDate;
 
