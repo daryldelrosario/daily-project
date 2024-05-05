@@ -1,18 +1,24 @@
+/* DOM VARIABLES */
+const today = document.getElementById("today");
+const lastStreak = document.getElementById("last-streak");
 const logo = document.getElementById("logo");
+const jokeContainer = document.getElementById("joke-container");
+
+/* GOT TO CLEAN UP THIS CODE */
 logo.innerHTML = "@daryldevcodes";
 logo.style.fontSize = "22px";
 logo.style.fontWeight = "700";
 
 let currentDate = new Date();
 let displayDate = currentDate.toString();
-const today = document.querySelector("#today");
+
 today.textContent = displayDate;
 
-let lastDate = "Sat May 04 2024 09:55:53 GMT-0400 (Eastern Daylight Time)";
-const lastStreak = document.querySelector("#last-streak");
+let lastDate = "Sun May 05 2024 07:14:55 GMT-0400 (Eastern Daylight Time)";
+
 lastStreak.textContent = lastDate;
 
-const date = document.querySelector("#theDate");
+
 let copiedDate = document.querySelector("#today").textContent;
 function copyDate() {
     try {
@@ -24,3 +30,25 @@ function copyDate() {
         alert("Failed to copy: " , err);
     }
 }
+/* END OF CLEANING */
+
+/* FETCH API EXERCISE */
+const fetchJoke = async () => {
+    try {
+        const response = await fetch("https://api.chucknorris.io/jokes/random");
+        const data = await response.json();
+        return data.value;
+    } catch(error) {
+        console.log("There was an error fetching the joke: ", error);
+        alert(error);
+    }
+}
+
+(async () => {
+    try {
+        const joke = await fetchJoke();
+        jokeContainer.innerHTML = `<p>${joke}</p>`;
+    } catch(error) {
+        alert(error);
+    }
+})();
