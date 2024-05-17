@@ -14,7 +14,7 @@ let displayDate = currentDate.toString();
 
 today.textContent = displayDate;
 
-let lastDate = "Thu May 16 2024 06:03:21 GMT-0400 (Eastern Daylight Time)";
+let lastDate = "Fri May 17 2024 05:58:06 GMT-0400 (Eastern Daylight Time)";
 
 lastStreak.textContent = lastDate;
 
