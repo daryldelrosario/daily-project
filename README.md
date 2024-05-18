@@ -1,1 +1,1 @@
-# today
+# daily-project
