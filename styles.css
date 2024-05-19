@@ -12,6 +12,10 @@ body {
     justify-content: space-between;
 }
 
+/* NAV SECTION STYLES */
+#copydate-btn:hover {
+    cursor: pointer;
+}
 /* body {
     display: flex;
     justify-content: center;

@@ -1,5 +1,6 @@
 /* DOM VARIABLES */
 const jokeContainer = document.getElementById("joke-container");
+const copyDateBtn = document.getElementById("copydate-btn");
 // const today = document.getElementById("today");
 // const lastStreak = document.getElementById("last-streak");
 // const logo = document.getElementById("logo");
@@ -30,6 +31,13 @@ const displayJoke = async () => {
 
 displayJoke();
 
+// FUNCTION: copyDate
+const copyDate = () =>{
+    console.log("You Copied The Date");
+}
+
+// ADDEVENT LISTENERS
+copyDateBtn.addEventListener("click", copyDate);
 
 /* GOT TO CLEAN UP THIS CODE */
 // logo.innerHTML = "@daryldevcodes";
