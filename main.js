@@ -1,9 +1,24 @@
 /* DOM VARIABLES */
-const jokeContainer = document.getElementById("joke-container");
+const clock = document.getElementById("clock");
 const copyDateBtn = document.getElementById("copydate-btn");
+const jokeContainer = document.getElementById("joke-container");
 // const today = document.getElementById("today");
 // const lastStreak = document.getElementById("last-streak");
 // const logo = document.getElementById("logo");
+
+/* DYNAMIC CLOCK EXERCISE */
+const updateClock = () => {
+    const now = new Date();
+
+    const hours = String(now.getHours()).padStart(2, "0");
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+    const seconds = String(now.getSeconds()).padStart(2, "0");
+
+    clock.textContent = `${hours}:${minutes}:${seconds}`;
+}
+
+updateClock();
+setInterval(updateClock, 1000);
 
 /* FETCH API EXERCISE */
 const fetchJoke = async () => {
