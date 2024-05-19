@@ -1,4 +1,5 @@
 /* DOM VARIABLES */
+const date = document.getElementById("date");
 const clock = document.getElementById("clock");
 const copyDateBtn = document.getElementById("copydate-btn");
 const jokeContainer = document.getElementById("joke-container");
@@ -7,18 +8,22 @@ const jokeContainer = document.getElementById("joke-container");
 // const logo = document.getElementById("logo");
 
 /* DYNAMIC CLOCK EXERCISE */
-const updateClock = () => {
+const updateDateTime = () => {
     const now = new Date();
 
     const hours = String(now.getHours()).padStart(2, "0");
     const minutes = String(now.getMinutes()).padStart(2, "0");
     const seconds = String(now.getSeconds()).padStart(2, "0");
-
     clock.textContent = `${hours}:${minutes}:${seconds}`;
+
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, "0");
+    const day = String(now.getDate()).padStart(2, "0");
+    date.textContent = `${year}-${month}-${day}`;
 }
 
-updateClock();
-setInterval(updateClock, 1000);
+updateDateTime();
+setInterval(updateDateTime, 1000);
 
 /* FETCH API EXERCISE */
 const fetchJoke = async () => {

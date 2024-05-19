@@ -13,6 +13,10 @@ body {
 }
 
 /* NAV SECTION STYLES */
+nav {
+    display: flex;
+    
+}
 #copydate-btn:hover {
     cursor: pointer;
 }
