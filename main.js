@@ -1,6 +1,5 @@
 /* DOM VARIABLES */
-const date = document.getElementById("date");
-const clock = document.getElementById("clock");
+const dateTime = document.getElementById("date-time");
 const copyDateBtn = document.getElementById("copydate-btn");
 const jokeContainer = document.getElementById("joke-container");
 // const today = document.getElementById("today");
@@ -11,15 +10,24 @@ const jokeContainer = document.getElementById("joke-container");
 const updateDateTime = () => {
     const now = new Date();
 
-    const hours = String(now.getHours()).padStart(2, "0");
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const dayOfWeek = daysOfWeek[now.getDay()];
+
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const month = months[now.getMonth()];
+
+    const day = now.getDate();
+    const year = now.getFullYear();
+
+    const hours = now.getHours();
     const minutes = String(now.getMinutes()).padStart(2, "0");
     const seconds = String(now.getSeconds()).padStart(2, "0");
-    clock.textContent = `${hours}:${minutes}:${seconds}`;
+    const amPM = hours >= 12 ? "PM" : "AM";
+    const formattedHours = hours % 12 === 0 ? 12 : hours % 12;
 
-    const year = now.getFullYear();
-    const month = String(now.getMonth() + 1).padStart(2, "0");
-    const day = String(now.getDate()).padStart(2, "0");
-    date.textContent = `${year}-${month}-${day}`;
+    const formattedDateTime = `${dayOfWeek}, ${month} ${day}, ${year} @ ${formattedHours}:${minutes}:${seconds} ${amPM}`
+
+    dateTime.textContent = formattedDateTime;
 }
 
 updateDateTime();
@@ -53,7 +61,7 @@ displayJoke();
 
 // FUNCTION: copyDate
 const copyDate = () =>{
-    console.log("You Copied The Date");
+    alert("You Copied The Date");
 }
 
 // ADDEVENT LISTENERS
