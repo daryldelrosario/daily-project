@@ -33,6 +33,17 @@ const updateDateTime = () => {
 updateDateTime();
 setInterval(updateDateTime, 1000);
 
+// FUNCTION: copyDate
+const copyDate = () => {
+    const capturedDate = dateTime.textContent;
+    try {
+        navigator.clipboard.writeText(capturedDate);
+        alert("Captured Date: " + capturedDate);
+    } catch(err) {
+        alert("Failed to copy: ", err);
+    }
+}
+
 /* FETCH API EXERCISE */
 const fetchJoke = async () => {
     try {
@@ -58,11 +69,6 @@ const displayJoke = async () => {
 }
 
 displayJoke();
-
-// FUNCTION: copyDate
-const copyDate = () =>{
-    alert("You Copied The Date");
-}
 
 // ADDEVENT LISTENERS
 copyDateBtn.addEventListener("click", copyDate);
