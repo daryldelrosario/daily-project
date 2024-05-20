@@ -6,11 +6,16 @@
     /* border: 1px red solid; */
 }
 
+/* GLOBAL SECTION STYLES */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 /* NAV SECTION STYLES */
@@ -19,15 +24,45 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
-
-#clock-container, #update-container {
+#update-container {
     text-align: center;
-    position: relative;
     margin: 1rem;
 }
 
-.pointer {
-    cursor: pointer;
+#updated-date {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+#updated-date::before {
+    content: "Last Updated";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #61dafb;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#updated-date:hover::before {
+    opacity: 0;
+}
+
+#updated-date:hover {
+    background-color: #61dafb;;
+    color: #fff;
+}
+
+#clock-container {
+    text-align: center;
+    position: relative;
+    margin: 1rem;
 }
 
 .behind-overlay {
@@ -49,7 +84,7 @@ nav {
 
 .shaded-blue {
     padding: 10px;
-    font-size: 1.5em;
+    font-size: 1em;
     background-color: #61dafb;
     color: white;
     border: none;
@@ -67,7 +102,7 @@ nav {
     opacity: 0;
 }
 
-#copydate-btn:hover, #updated-date:hover {
+#copydate-btn:hover{
     opacity: 1;
 }
 
