@@ -20,39 +20,46 @@ nav {
     align-items: center;
 }
 
-#clock-container {
+#clock-container, #update-container {
+    text-align: center;
     position: relative;
     margin: 1rem;
 }
 
-#date-time {
+.pointer {
+    cursor: pointer;
+}
+
+.behind-overlay {
     opacity: 1;
     position: relative;
-    font-size: 1em;
-    margin: 5px 0;
-    border: 2px solid #61dafb;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
-#copydate-btn {
+.overlay {
     opacity: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 5px;
+    width: 100%;
+    height: 85%;
+    transition: all 0.3s ease-in-out;
+}
+
+.shaded-blue {
+    padding: 10px;
     font-size: 1.5em;
-    cursor: pointer;
     background-color: #61dafb;
     color: white;
     border: none;
-    border-radius: 5px;
-    transition: opacity 0.3s ease-in-out;
-    width: 100%;
-    height: 85%;
+    border-radius: 10px;
+}
+
+.blue-bordered {
+    margin: 5px 0;
+    border: 2px solid #6adafb;
+    padding: 10px;
     border-radius: 10px;
 }
 
@@ -60,7 +67,7 @@ nav {
     opacity: 0;
 }
 
-#copydate-btn:hover {
+#copydate-btn:hover, #updated-date:hover {
     opacity: 1;
 }
 

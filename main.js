@@ -1,5 +1,6 @@
 /* DOM VARIABLES */
 const dateTime = document.getElementById("date-time");
+const displayUpdate = document.getElementById("updated-date");
 const copyDateBtn = document.getElementById("copydate-btn");
 const jokeContainer = document.getElementById("joke-container");
 // const today = document.getElementById("today");
@@ -39,8 +40,23 @@ const copyDate = () => {
     try {
         navigator.clipboard.writeText(capturedDate);
         alert("Captured Date: " + capturedDate);
+        updateLastCopied(capturedDate);
     } catch(err) {
         alert("Failed to copy: ", err);
+    }
+}
+
+// FUNCTION: updateLastCopied
+const updateLastCopied = (capturedDate) => {
+    displayUpdate.textContent = capturedDate;
+    localStorage.setItem("lastCopiedDate", capturedDate);
+}
+
+// FUNCTION: loadLastCopied
+const loadLastCopied = () => {
+    const lastCopiedDate = localStorage.getItem("lastCopiedDate");
+    if(lastCopiedDate) {
+        displayUpdate.textContent = lastCopiedDate;
     }
 }
 
@@ -72,6 +88,9 @@ displayJoke();
 
 // ADDEVENT LISTENERS
 copyDateBtn.addEventListener("click", copyDate);
+
+// LOAD LAST COPIED DATE ON PAGE LOAD
+loadLastCopied();
 
 /* GOT TO CLEAN UP THIS CODE */
 // logo.innerHTML = "@daryldevcodes";
