@@ -95,11 +95,11 @@ copyDateBtn.addEventListener("click", copyDate);
 // }
 /* END OF CLEANING */
 
-(async () => {
-    try {
-        const joke = await fetchJoke();
-        jokeContainer.innerHTML = `<p>${joke}</p>`;
-    } catch(error) {
-        alert(error);
-    }
-})();
+// (async () => {
+//     try {
+//         const joke = await fetchJoke();
+//         jokeContainer.innerHTML = `<p>${joke}</p>`;
+//     } catch(error) {
+//         alert(error);
+//     }
+// })();
