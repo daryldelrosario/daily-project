@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: "Rubik", sans-serif;
     /* border: 1px red solid; */
 }
 
@@ -12,6 +14,16 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 300 to 900 */
+
+.rubik-normal {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .pointer {
@@ -104,6 +116,15 @@ nav {
 
 #copydate-btn:hover{
     opacity: 1;
+}
+
+/* FOOTER STYLES */
+#joke-container {
+    text-align: center;
+    background-color: orangered;
+    padding: 1rem;
+    border: 7px purple solid;
+    /* box-shadow: 10px 10px 5px 2px rgba(0, 0, 0, 0.5); */
 }
 
 /* body {
