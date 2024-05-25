@@ -118,6 +118,14 @@ nav {
     opacity: 1;
 }
 
+/* MAIN STYLES*/
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* FOOTER STYLES */
 #joke-container {
     font-weight: 700;
