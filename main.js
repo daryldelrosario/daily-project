@@ -86,8 +86,14 @@ const displayJoke = async () => {
 
 displayJoke();
 
+// FUNCTION reloadPage
+const reloadPage = () => {
+    location.reload();
+}
+
 // ADDEVENT LISTENERS
 copyDateBtn.addEventListener("click", copyDate);
+jokeContainer.addEventListener("click", reloadPage);
 
 // LOAD LAST COPIED DATE ON PAGE LOAD
 loadLastCopied();
