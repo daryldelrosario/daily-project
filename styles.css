@@ -124,6 +124,9 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 1px red solid;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .left-gradient,
