@@ -126,6 +126,11 @@ main {
     align-items: center;
 }
 
+.left-gradient,
+.right-gradient {
+    cursor: pointer;
+}
+
 /* FOOTER STYLES */
 #joke-container {
     font-weight: 700;
