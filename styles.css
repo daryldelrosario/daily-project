@@ -14,6 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
 }
 
 /* <uniquifier>: Use a unique and descriptive class name
@@ -138,7 +139,7 @@ main {
 #joke-container {
     font-weight: 700;
     text-align: center;
-    background-color: black;
+    background-color: rgba(0 0 0 / 0.25);
     color: white;
     padding: 1rem;
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
