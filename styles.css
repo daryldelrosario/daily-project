@@ -37,6 +37,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
+
 #update-container {
     text-align: center;
     margin: 1rem;
@@ -106,9 +107,12 @@ nav {
 
 .blue-bordered {
     margin: 5px 0;
-    border: 2px solid #6adafb;
     padding: 10px;
     border-radius: 10px;
+    background-color: rgba(0 0 0 / 0.25);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-weight: 500;
 }
 
 #date-time:hover {
@@ -137,6 +141,7 @@ main {
 
 /* FOOTER STYLES */
 #joke-container {
+    border-radius: 10px;
     font-weight: 700;
     text-align: center;
     background-color: rgba(0 0 0 / 0.25);
@@ -145,37 +150,3 @@ main {
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
-
-/* body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    gap: 1rem;
-    background-color: orangered;
-}
-
-.today-container {
-    text-align: center;
-}
-
-.last-streak-container {
-    text-align: center;
-}
-
-#copy-button {
-    padding: 7px;
-    font-size: 16px;
-    border-radius: 11px;
-    font-weight: bolder;
-    background-color: lightblue;
-}
-
-#copy-button:hover {
-    cursor: pointer;
-}
-
-h5, #last-streak {
-    color: white;
-}     */
