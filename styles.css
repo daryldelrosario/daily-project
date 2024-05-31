@@ -139,6 +139,14 @@ main {
     cursor: pointer;
 }
 
+/* COLOR GENERATOR SECTION STYLES */
+#color-generator-container {
+    border: 1px yellow solid;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 /* FOOTER STYLES */
 #joke-container {
     border-radius: 10px;
