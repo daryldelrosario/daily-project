@@ -95,6 +95,7 @@ const reloadPage = () => {
 /* BACKGROUND COLOR GRADIENT GENERATOR EXERCISE */
 chosenLeftGradient.textContent = leftGradientInput.value;
 chosenRightGradient.textContent = rightGradientInput.value;
+
 // FUNCTION: display the chosen left & right gradient
 const displayLeftGradient = () => {
     const color = leftGradientInput.value;
