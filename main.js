@@ -2,10 +2,11 @@
 const dateTime = document.getElementById("date-time");
 const displayUpdate = document.getElementById("updated-date");
 const copyDateBtn = document.getElementById("copydate-btn");
+const leftGradientInput = document.getElementById("left-gradient-input");
+const rightGradientInput = document.getElementById("right-gradient-input");
+const chosenLeftGradient = document.getElementById("chosen-left-gradient");
+const chosenRightGradient = document.getElementById("chosen-right-gradient");
 const jokeContainer = document.getElementById("joke-container");
-// const today = document.getElementById("today");
-// const lastStreak = document.getElementById("last-streak");
-// const logo = document.getElementById("logo");
 
 /* DYNAMIC CLOCK EXERCISE */
 const updateDateTime = () => {
@@ -91,9 +92,25 @@ const reloadPage = () => {
     location.reload();
 }
 
+/* BACKGROUND COLOR GRADIENT GENERATOR EXERCISE */
+chosenLeftGradient.textContent = leftGradientInput.value;
+chosenRightGradient.textContent = rightGradientInput.value;
+// FUNCTION: display the chosen left & right gradient
+const displayLeftGradient = () => {
+    const color = leftGradientInput.value;
+    chosenLeftGradient.textContent = color;
+}
+
+const displayRightGradient = () => {
+    const color = rightGradientInput.value;
+    chosenRightGradient.textContent = color;
+}
+
 // ADDEVENT LISTENERS
 copyDateBtn.addEventListener("click", copyDate);
 jokeContainer.addEventListener("click", reloadPage);
+leftGradientInput.addEventListener("input", displayLeftGradient);
+rightGradientInput.addEventListener("input", displayRightGradient);
 
 // LOAD LAST COPIED DATE ON PAGE LOAD
 loadLastCopied();
