@@ -6,6 +6,7 @@ const leftGradientInput = document.getElementById("left-gradient-input");
 const rightGradientInput = document.getElementById("right-gradient-input");
 const chosenLeftGradient = document.getElementById("chosen-left-gradient");
 const chosenRightGradient = document.getElementById("chosen-right-gradient");
+const randomGradientBtn = document.querySelector(".random-gradient");
 const jokeContainer = document.getElementById("joke-container");
 const body = document.body;
 
@@ -117,11 +118,33 @@ const displayRightGradient = () => {
     setGradientBackground(leftGradientInput.value, color);
 }
 
+// FUNCTION: generate random color
+const getRandomColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for(let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+
+    return color;
+}
+
+// FUNCTION: generate random gradient 
+const generateRandomGradient = () => {
+    const leftColor = getRandomColor();
+    const rightColor = getRandomColor();
+    leftGradientInput.value = leftColor;
+    rightGradientInput.value = rightColor;
+    displayLeftGradient();
+    displayRightGradient();
+}
+
 // ADDEVENT LISTENERS
 copyDateBtn.addEventListener("click", copyDate);
 jokeContainer.addEventListener("click", reloadPage);
 leftGradientInput.addEventListener("input", displayLeftGradient);
 rightGradientInput.addEventListener("input", displayRightGradient);
+randomGradientBtn.addEventListener("click", generateRandomGradient);
 
 // LOAD LAST COPIED DATE ON PAGE LOAD
 loadLastCopied();
