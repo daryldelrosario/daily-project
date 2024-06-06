@@ -159,6 +159,10 @@ main {
 
 .random-gradient {
     cursor: pointer;
+    border-radius: 5px;
+    padding: 3px 9px;
+    border: none;
+    margin: 3px;
 }
 
 input {
