@@ -165,6 +165,12 @@ main {
     margin: 3px;
 }
 
+#left-gradient-input,
+#right-gradient-input {
+    border-radius: 5px;
+    padding: 2px;
+}
+
 .random-gradient:hover {
     background-color: black;
     color: white;
