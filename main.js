@@ -7,6 +7,7 @@ const rightGradientInput = document.getElementById("right-gradient-input");
 const chosenLeftGradient = document.getElementById("chosen-left-gradient");
 const chosenRightGradient = document.getElementById("chosen-right-gradient");
 const jokeContainer = document.getElementById("joke-container");
+const body = document.body;
 
 /* DYNAMIC CLOCK EXERCISE */
 const updateDateTime = () => {
@@ -93,18 +94,27 @@ const reloadPage = () => {
 }
 
 /* BACKGROUND COLOR GRADIENT GENERATOR EXERCISE */
+// FUNCTION to set background gradient
+const setGradientBackground = (leftColor, rightColor) => {
+    body.style.background = `linear-gradient(to right, ${leftColor}, ${rightColor})`;
+}
+
 chosenLeftGradient.textContent = leftGradientInput.value;
 chosenRightGradient.textContent = rightGradientInput.value;
+
+setGradientBackground(leftGradientInput.value, rightGradientInput.value);
 
 // FUNCTION: display the chosen left & right gradient
 const displayLeftGradient = () => {
     const color = leftGradientInput.value;
     chosenLeftGradient.textContent = color;
+    setGradientBackground(color, rightGradientInput.value);
 }
 
 const displayRightGradient = () => {
     const color = rightGradientInput.value;
     chosenRightGradient.textContent = color;
+    setGradientBackground(leftGradientInput.value, color);
 }
 
 // ADDEVENT LISTENERS

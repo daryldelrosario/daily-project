@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
 }
 
 /* <uniquifier>: Use a unique and descriptive class name
@@ -145,13 +145,24 @@ main {
     flex: 1;
     align-items: center;
     justify-content: space-evenly;
-    border: 1px yellow solid;
+}
+
+#chosen-left-gradient,
+#chosen-right-gradient {
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.6), 0 0 30px rgba(0, 255, 0, 0.4);
 }
 
 #color-generator {
-    border: purple 1px solid;
     width: 33%;
     text-align: center;
+}
+
+.random-gradient {
+    cursor: pointer;
+}
+
+input {
+    width: 40%;
 }
 
 /* FOOTER STYLES */
