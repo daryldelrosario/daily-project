@@ -165,6 +165,12 @@ main {
     margin: 3px;
 }
 
+.random-gradient:hover {
+    background-color: black;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
 input {
     width: 40%;
 }
