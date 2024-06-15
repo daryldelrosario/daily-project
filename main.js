@@ -139,6 +139,8 @@ const generateRandomGradient = () => {
     displayRightGradient();
 }
 
+generateRandomGradient();
+
 // ADDEVENT LISTENERS
 copyDateBtn.addEventListener("click", copyDate);
 jokeContainer.addEventListener("click", reloadPage);
