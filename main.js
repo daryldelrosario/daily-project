@@ -64,6 +64,7 @@ const loadLastCopied = () => {
 }
 
 /* FETCH API EXERCISE */
+/* TODO: modify so that #joke-container changes to loading quote if first api fails */
 const fetchJoke = async () => {
     try {
         const response = await fetch("https://api.chucknorris.io/jokes/random");
