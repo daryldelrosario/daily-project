@@ -81,7 +81,7 @@ const fetchJoke = async () => {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            return `${data.sentence} by ${data.character.name}`;
+            return `${data.sentence} - ${data.character.name}`;
         } catch(error) {
             console.error("There was an error fetching the Game of Thrones quote: ", error);
             throw error;
