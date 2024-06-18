@@ -73,8 +73,19 @@ const fetchJoke = async () => {
         const data = await response.json();
         return data.value;
     } catch(error) {
-        console.error("There was an error fetching the joke: ", error);
-        throw error;
+        console.error("Failed to fetch Chuck Norris joke, trying Game of Thrones quotes: ", error);
+        
+        try {
+            const response = await fetch("https://api.gameofthronesquotes.xyz/v1/random");
+            if(!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            return `${data.sentence} by ${data.character.name}`;
+        } catch(error) {
+            console.error("There was an error fetching the Game of Thrones quote: ", error);
+            throw error;
+        }
     }
 }
 
