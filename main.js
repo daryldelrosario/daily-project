@@ -64,7 +64,6 @@ const loadLastCopied = () => {
 }
 
 /* FETCH API EXERCISE */
-/* TODO: modify so that #joke-container changes to loading quote if first api fails */
 const fetchJoke = async () => {
     try {
         const response = await fetch("https://api.chucknorris.io/jokes/random");
@@ -74,13 +73,14 @@ const fetchJoke = async () => {
         const data = await response.json();
         return data.value;
     } catch(error) {
+        jokeContainer.innerHTML = `<p>Joke Failed ... Fetching Game of Thrones</p>`
         console.error("Failed to fetch Chuck Norris joke, trying Game of Thrones quotes: ", error);
         
         try {
             const response = await fetch("https://api.gameofthronesquotes.xyz/v1/random");
             if(!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
-            }
+            };
             const data = await response.json();
             return `${data.sentence} - ${data.character.name}`;
         } catch(error) {
