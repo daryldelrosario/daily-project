@@ -17,6 +17,10 @@ body {
     /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
 }
 
+h1 {
+    text-align: center;
+}
+
 /* <uniquifier>: Use a unique and descriptive class name
 <weight>: Use a value from 300 to 900 */
 
@@ -29,6 +33,12 @@ body {
 
 .pointer {
     cursor: pointer;
+}
+
+.btn {
+    border: 1px black solid;
+    padding: 0.25rem;
+    border-radius: 7px;
 }
 
 /* NAV SECTION STYLES */
