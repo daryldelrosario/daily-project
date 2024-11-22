@@ -142,6 +142,9 @@ main {
     border: 1px red solid;
     width: 80%;
     margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1rem;
 }
 
 .left-gradient,
