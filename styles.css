@@ -194,6 +194,10 @@ input {
     width: 40%;
 }
 
+main {
+    height: 50vh;
+}
+
 /* FOOTER STYLES */
 #joke-container {
     border-radius: 10px;
