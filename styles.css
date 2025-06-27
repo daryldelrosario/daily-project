@@ -201,9 +201,15 @@ main {
 /* CAROUSAL STYLES */
 .project-link {
     text-decoration: none;
-    color: white;
-    text-shadow: 0 0 3px red;
+    color: black;
+    text-shadow: 0 0 3px white;
+    transition: all ease-in-out 0.3s;
+}
 
+.project-link:hover {
+    color: red;
+    text-shadow: 0 0 3px white;
+    transition: all ease-in-out 0.3s;
 }
 
 /* FOOTER STYLES */
