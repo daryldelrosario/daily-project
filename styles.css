@@ -198,6 +198,14 @@ main {
     height: 50vh;
 }
 
+/* CAROUSAL STYLES */
+.project-link {
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 3px red;
+
+}
+
 /* FOOTER STYLES */
 #joke-container {
     border-radius: 10px;
