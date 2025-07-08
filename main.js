@@ -10,6 +10,12 @@ const randomGradientBtn = document.querySelector(".random-gradient");
 const jokeContainer = document.getElementById("joke-container");
 const body = document.body;
 
+/* CHUCK & GAME BUTTONS */
+const chuckBtn = document.getElementById("chuck-btn");
+const gameBtn = document.getElementById("got-btn");
+
+
+
 /* DYNAMIC CLOCK EXERCISE */
 const updateDateTime = () => {
     const now = new Date();
@@ -159,6 +165,14 @@ jokeContainer.addEventListener("click", reloadPage);
 leftGradientInput.addEventListener("input", displayLeftGradient);
 rightGradientInput.addEventListener("input", displayRightGradient);
 randomGradientBtn.addEventListener("click", generateRandomGradient);
+
+chuckBtn.addEventListener("click", () => {
+    alert("This is the Chuck Norris Button");
+})
+
+gameBtn.addEventListener("click", () => {
+    alert("This is the Game of Thrones Button");
+})
 
 // LOAD LAST COPIED DATE ON PAGE LOAD
 loadLastCopied();
